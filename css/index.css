@@ -3,20 +3,7 @@
     max-width:100%;
 }
 
-span {
-    display: none;
-    font-family:'TT Lakes' ;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-
-}
-
-.topmenu button {
-    cursor: pointer;
-}
-
-.topmenu {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +11,11 @@ span {
     background-color: #fff;
 }
 
-.topleft {
+.header button {
+    cursor: pointer;
+}
+
+.header__left-side {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +24,7 @@ span {
     margin-left: 3%;
 }
 
-.menubtn {
+.btn-menu {
     background-image: url(/img/ic/burger.png);
     background-size: 100%;
     border-radius: 20px;
@@ -42,7 +33,7 @@ span {
     height: 40px;
 }
 
-.vline {
+.decor-line {
     display: flex;
     height: 32px;
     width: 2px;
@@ -60,7 +51,16 @@ span {
     background-size: 100%;
 }
 
-.phonebtn {
+
+.header__right-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 288px;
+    padding-right: 2%;
+}
+
+.btn-phone {
     width: 40px;
     height: 40px;
     background-image: url(/img/ic/call.png);
@@ -69,7 +69,7 @@ span {
     border: 0px;
 }
 
-.massagebtn{ 
+.btn-massage{ 
     width: 40px;
     height: 40px;
     background-image: url(/img/ic/chat.png);
@@ -78,7 +78,7 @@ span {
     border: 0px;
 }
 
-.userbtn {
+.btn-user {
     width: 40px;
     height: 40px;
     background-image: url(/img/ic/profile.png);
@@ -87,25 +87,12 @@ span {
     border: 0px;
 }
 
-.topright {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 288px;
-    padding-right: 2%;
-}
-
-.vline2 {
-    height: 32px;
-    width: 2px;
-    border-color:#EAEAEA;
-    background: #EAEAEA;
-    border-radius: 1px;
+.decor-line_space{
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.optionbtn { 
+.btn-option { 
     width: 40px;
     height: 40px;
     background-image: url(/img/ic/repair.png);
@@ -114,7 +101,7 @@ span {
     border: 0px;
 }
 
-.searchbtn {
+.btn-search {
     width: 40px;
     height: 40px;
     background-image: url(/img/ic/checkstatus.png);
@@ -123,13 +110,20 @@ span {
     border: 0px;
 }
 
-.info {
-    display: flex;
-    align-items: center;
-    background-color: #F8F8F8;
+.text-for-btn {
+    display: none;
+    font-family:'TT Lakes' ;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
 }
 
-.info h2 {
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title__text{
     padding-left: 3%;
     line-height: 40px;
     letter-spacing: 0.6px;
@@ -137,7 +131,7 @@ span {
     font-family:'TT Lakes';
 }
 
-.vline3 {
+.decor-line_half {
     width: 4px;
     height: 40px;
     background: #41F6D7;
@@ -145,7 +139,7 @@ span {
     border-bottom-right-radius: 20px ;
 }
 
-.tab {
+.catalog {
     display:flex;
     padding-left: 3%;
     padding-right: 3%;
@@ -154,7 +148,7 @@ span {
     overflow-y: hidden;
 }
 
-.tab button {
+.catalog__btn {
     justify-content: space-around;
     font-size: 16px;
     line-height: 24px;
@@ -167,30 +161,42 @@ span {
     color: #7E7E82;
 }
 
-.tab button:nth-child(1),.tab button:nth-child(5) {
+.catalog__btn:nth-child(1),.catalog__btn:nth-child(5) {
     display: none;
 }
 
-.tab::-webkit-scrollbar {
+.catalog::-webkit-scrollbar {
     width: 0px;
 }
 
-.tab button:hover {
+.catalog__btn:hover {
     border:2px solid  #B8FFec;
     background-color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
 
 .content {
     display: flex;
     width: 100%;
 } 
 
-.leftside {
+.content-leftside {
     flex: 50%;
     flex-direction: column;
     margin-left: 3%;
     margin-right: 3%;
     margin-bottom: 3%;
+}
+.content-leftside__text{
     font-family: 'TT Lakes';
     font-size: 14px;
     line-height: 20px;
@@ -198,7 +204,7 @@ span {
     color: #1B1C21;
 }
 
-.btnnext {
+.content-leftside__btnnext {
     justify-content: space-between;
     font-family: 'TT Lakes';
     font-size: 16px;
@@ -209,23 +215,24 @@ span {
     font-weight: bold;
 }
 
-.rightside {
+.content-rightside {
     flex: 50%;
     margin-top: 16px;
     margin-right: 3%;
     margin-bottom: 3%;
 }
 
-.rightside :nth-child(1) {
+.content-rightside :nth-child(1) {
     width: 100%;
     height:100%;
     border-top-left-radius: 8px;
 }
 
 @media (max-width: 320px) {
-    .vline,.phonebtn,.massagebtn,.userbtn{
+    .header__left-side :nth-child(2),.btn-phone,.btn-massage,.btn-user{
         display: none;
     }
+
     .logo{
         margin-left: 8px;
     }
@@ -234,37 +241,38 @@ span {
         flex-direction: column  ;
     }
 
-    .rightside {
+    .content-rightside {
         margin-left: 0px;
         padding-top: 50px;
     }
 }
 
 @media (min-width:1120px) {
-    .topmenu {
+    .header {
         float: right;
         background-color: #F8F8F8;
     }
-    span {
+
+    .text-for-btn {
         display: flex;    
     }
     
-    .topleft,.vline2,.phonebtn,.massagebtn,.userbtn {
+    .header__left-side,.header__right-side :nth-child(4),.btn-phone,.btn-massage,.btn-user {
         display: none;
     }
-    .topright{
+    .header__right-side{
         width: 373px;
     }
 
-    .tab {
+    .catalog {
         display: inline-flex;
     }
 
-    .tab button:nth-child(1),.tab button:nth-child(5) {
+    .catalog__btn:nth-child(1),.catalog__btn:nth-child(5) {
         display: flex;
     }
 
-    .tab button:nth-child(3) {
+    .catalog__btn:nth-child(3) {
         display: none;
     }
     }
