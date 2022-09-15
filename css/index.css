@@ -11,10 +11,6 @@
     background-color: #fff;
 }
 
-.header button {
-    cursor: pointer;
-}
-
 .header__left-side {
     display: flex;
     justify-content: space-between;
@@ -24,34 +20,6 @@
     margin-left: 3%;
 }
 
-.btn-menu {
-    background-image: url(/img/ic/burger.png);
-    background-size: 100%;
-    border-radius: 20px;
-    border: 0px;
-    width: 40px;
-    height: 40px;
-}
-
-.decor-line {
-    display: flex;
-    height: 32px;
-    width: 2px;
-    border-color:#EAEAEA;
-    background: #EAEAEA;
-    top: 28px;
-    left: 84px;
-    border-radius: 1px;
-}
-
-.logo {
-    width: 96.55px;
-    height: 50.81px;
-    background-image: url(/img/logo.png);
-    background-size: 100%;
-}
-
-
 .header__right-side {
     display: flex;
     justify-content: space-between;
@@ -60,57 +28,7 @@
     padding-right: 2%;
 }
 
-.btn-phone {
-    width: 40px;
-    height: 40px;
-    background-image: url(/img/ic/call.png);
-    background-size: 100%;
-    border-radius: 20px;
-    border: 0px;
-}
-
-.btn-massage{ 
-    width: 40px;
-    height: 40px;
-    background-image: url(/img/ic/chat.png);
-    background-size: 100%;
-    border-radius: 20px;
-    border: 0px;
-}
-
-.btn-user {
-    width: 40px;
-    height: 40px;
-    background-image: url(/img/ic/profile.png);
-    background-size: 100%;
-    border-radius: 20px;
-    border: 0px;
-}
-
-.decor-line_space{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.btn-option { 
-    width: 40px;
-    height: 40px;
-    background-image: url(/img/ic/repair.png);
-    background-size: 100%;
-    border-radius: 20px;
-    border: 0px;
-}
-
-.btn-search {
-    width: 40px;
-    height: 40px;
-    background-image: url(/img/ic/checkstatus.png);
-    background-size: 100%;
-    border-radius: 20px;
-    border: 0px;
-}
-
-.text-for-btn {
+.right-side__text-for-buton {
     display: none;
     font-family:'TT Lakes' ;
     font-size: 16px;
@@ -129,14 +47,6 @@
     letter-spacing: 0.6px;
     font-size: 28px;
     font-family:'TT Lakes';
-}
-
-.decor-line_half {
-    width: 4px;
-    height: 40px;
-    background: #41F6D7;
-    border-top-right-radius :20px ;
-    border-bottom-right-radius: 20px ;
 }
 
 .catalog {
@@ -174,29 +84,20 @@
     background-color: #fff;
 }
 
-
-
-
-
-
-
-
-
-
-
 .content {
     display: flex;
     width: 100%;
 } 
 
-.content-leftside {
+.content__leftside {
     flex: 50%;
     flex-direction: column;
     margin-left: 3%;
     margin-right: 3%;
     margin-bottom: 3%;
 }
-.content-leftside__text{
+
+.leftside__text{
     font-family: 'TT Lakes';
     font-size: 14px;
     line-height: 20px;
@@ -204,7 +105,7 @@
     color: #1B1C21;
 }
 
-.content-leftside__btnnext {
+.leftside__btnnext {
     justify-content: space-between;
     font-family: 'TT Lakes';
     font-size: 16px;
@@ -215,21 +116,21 @@
     font-weight: bold;
 }
 
-.content-rightside {
+.content__rightside {
     flex: 50%;
     margin-top: 16px;
     margin-right: 3%;
     margin-bottom: 3%;
 }
 
-.content-rightside :nth-child(1) {
+.content__rightside :nth-child(1) {
     width: 100%;
     height:100%;
     border-top-left-radius: 8px;
 }
 
 @media (max-width: 320px) {
-    .header__left-side :nth-child(2),.btn-phone,.btn-massage,.btn-user{
+    .header__left-side :nth-child(2),.component--round-button--phone,.component--round-button--massage,.component--round-button--user{
         display: none;
     }
 
@@ -241,7 +142,7 @@
         flex-direction: column  ;
     }
 
-    .content-rightside {
+    .content__rightside {
         margin-left: 0px;
         padding-top: 50px;
     }
@@ -253,13 +154,14 @@
         background-color: #F8F8F8;
     }
 
-    .text-for-btn {
+    .right-side__text-for-buton {
         display: flex;    
     }
     
-    .header__left-side,.header__right-side :nth-child(4),.btn-phone,.btn-massage,.btn-user {
+    .header__left-side,.header__right-side :nth-child(4),.component--round-button--phone,.component--round-button--massage,.component--round-button--user {
         display: none;
     }
+
     .header__right-side{
         width: 373px;
     }
@@ -276,3 +178,4 @@
         display: none;
     }
     }
+    
