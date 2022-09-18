@@ -3,7 +3,7 @@
     max-width:100%;
 }
 
-.header {
+.page__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,9 +36,18 @@
     letter-spacing: -0.2px;
 }
 
-.title {
+.page__title {
     display: flex;
     align-items: center;
+}
+
+.title__decor-line {
+    border-radius: 1px;
+    width: 4px;
+    height: 40px;
+    background: #41F6D7;
+    border-top-right-radius :20px ;
+    border-bottom-right-radius: 20px ;
 }
 
 .title__text{
@@ -49,7 +58,7 @@
     font-family:'TT Lakes';
 }
 
-.catalog {
+.page__catalog {
     display:flex;
     padding-left: 3%;
     padding-right: 3%;
@@ -75,7 +84,7 @@
     display: none;
 }
 
-.catalog::-webkit-scrollbar {
+.page__catalog::-webkit-scrollbar {
     width: 0px;
 }
 
@@ -84,7 +93,7 @@
     background-color: #fff;
 }
 
-.content {
+.page__content {
     display: flex;
     width: 100%;
 } 
@@ -130,15 +139,19 @@
 }
 
 @media (max-width: 320px) {
-    .header__left-side :nth-child(2),.component--round-button--phone,.component--round-button--massage,.component--round-button--user{
+    .header__left-side :nth-child(2){
         display: none;
     }
 
-    .logo{
+    .component__round-button__vanish{
+        display: none;
+    }
+
+    .component__logo{
         margin-left: 8px;
     }
 
-    .content {
+    .page__content {
         flex-direction: column  ;
     }
 
@@ -149,7 +162,7 @@
 }
 
 @media (min-width:1120px) {
-    .header {
+    .page__header {
         float: right;
         background-color: #F8F8F8;
     }
@@ -158,12 +171,20 @@
         display: flex;    
     }
     
-    .header__left-side,.header__right-side :nth-child(4),.component--round-button--phone,.component--round-button--massage,.component--round-button--user {
+    .header__left-side{
         display: none;
     }
 
     .header__right-side{
         width: 373px;
+    }
+
+    .header__right-side :nth-child(4) {
+        display: none;
+    }
+
+    .component__round-button__vanish {
+        display: none;
     }
 
     .catalog {
@@ -178,4 +199,3 @@
         display: none;
     }
     }
-    
